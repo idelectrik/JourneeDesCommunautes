@@ -4611,7 +4611,7 @@
          "name":"floorLayer",
          "objects":[
                 {
-                 "class":"",
+                 "class":"area",
                  "ellipse":true,
                  "height":64,
                  "id":31,
@@ -4623,7 +4623,7 @@
                  "y":2306
                 }, 
                 {
-                 "class":"",
+                 "class":"area",
                  "ellipse":true,
                  "height":62,
                  "id":32,
@@ -4635,7 +4635,7 @@
                  "y":2632
                 }, 
                 {
-                 "class":"",
+                 "class":"area",
                  "ellipse":true,
                  "height":68,
                  "id":33,
@@ -4647,7 +4647,7 @@
                  "y":2818
                 }, 
                 {
-                 "class":"",
+                 "class":"area",
                  "ellipse":true,
                  "height":60,
                  "id":34,
