@@ -6172,19 +6172,6 @@
          "tilecount":41712,
          "tileheight":32,
          "tilewidth":32
-        }, 
-        {
-         "columns":83,
-         "firstgid":57622,
-         "image":"tilesets\/modernexteriors-win\/Modern_Exteriors_32x32\/Animated_32x32\/Vehicles_32x32\/Cars_32x32\/Car_classic_grey_complete_32x32.png",
-         "imageheight":1440,
-         "imagewidth":2656,
-         "margin":0,
-         "name":"Car_classic_grey_complete_32x32",
-         "spacing":0,
-         "tilecount":3735,
-         "tileheight":32,
-         "tilewidth":32
         }],
  "tilewidth":32,
  "type":"map",
