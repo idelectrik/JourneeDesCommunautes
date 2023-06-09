@@ -69,7 +69,7 @@ WA.onInit().then(() => {
 
 
     WA.room.area.onEnter('needHelp').subscribe(() => {
-        currentPopup = WA.ui.openPopup("Help", "C'est l'indice 9", [{
+        currentPopup = WA.ui.openPopup("needHelpPopup", "C'est l'indice 9", [{
             label: "Close",
             className: "primary",
             callback: () => WA.openTab('https://play.staging.workadventu.re/@/tcm/workadventure/wa-village'),
