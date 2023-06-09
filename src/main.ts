@@ -5,6 +5,7 @@ import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 console.log('Script started successfully');
 
 let currentPopup: any = undefined;
+let currentZone: string;
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
