@@ -74,18 +74,18 @@ WA.onInit().then(() => {
             className: "primary",
             callback: () => WA.openTab('https://www.linkedin.com/company/neosoft_'),
                 // Close the popup when the "Close" button is pressed.
-                popup.close();
+                currentPopup.close(),
         },
         {
             label: 'Twitter',
             className: 'primary',
             callback: () => WA.openTab('https://twitter.com/workadventure_'),
-                popup.close();
+                currentPopup.close(),
         }]);
 
     })
 
-    WA.room.area.onLeave('needHelp').subscribe(closePopup)
+    WA.room.area.onLeave('rs').subscribe(closePopup)
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
