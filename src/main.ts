@@ -68,13 +68,19 @@ WA.onInit().then(() => {
     WA.room.area.onLeave('indice9').subscribe(closePopup)
 
 
-    WA.room.area.onEnter('needHelp').subscribe(() => {
-        currentPopup = WA.ui.openPopup("needHelpPopup", "C'est l'indice 9", [{
-            label: "Close",
+    WA.room.area.onEnter('rs').subscribe(() => {
+        currentPopup = WA.ui.openPopup("rsPopup", "Viens nous suivre sur les réseaux sociaux !", [{
+            label: "Linkedin",
             className: "primary",
-            callback: () => WA.openTab('https://play.staging.workadventu.re/@/tcm/workadventure/wa-village'),
+            callback: () => WA.openTab('https://www.linkedin.com/company/neosoft_'),
                 // Close the popup when the "Close" button is pressed.
-                // popup.close();
+                popup.close();
+        },
+        {
+            label: 'Twitter',
+            className: 'primary',
+            callback: () => WA.openTab('https://twitter.com/workadventure_'),
+                popup.close();
         }]);
 
     })
