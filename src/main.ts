@@ -89,16 +89,6 @@ WA.onInit().then(() => {
 }).catch(e => console.error(e));
 
 
-function openPopup(zoneName: string, popupName: string) {
-    const zone = config.find((item) => {
-        return item.zone == zoneName
-    });
-    if (typeof zone !== 'undefined') {
-        // @ts-ignore otherwise we can't use zone.cta object
-        currentPopup = WA.openPopup(popupName, zone.message, zone.cta)
-    }
-}
-
 function closePopup(){
     if (currentPopup !== undefined) {
         currentPopup.close();
