@@ -6301,6 +6301,17 @@
                  "width":342.666666666667,
                  "x":986,
                  "y":3338.66666666667
+                }, 
+                {
+                 "class":"",
+                 "height":77.6667,
+                 "id":91,
+                 "name":"needHelpPopup",
+                 "rotation":0,
+                 "visible":true,
+                 "width":203.667,
+                 "x":731.1665,
+                 "y":2230.16665
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -6699,7 +6710,7 @@
          "y":0
         }],
  "nextlayerid":130,
- "nextobjectid":91,
+ "nextobjectid":92,
  "orientation":"orthogonal",
  "properties":[
         {
