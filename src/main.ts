@@ -72,15 +72,19 @@ WA.onInit().then(() => {
         currentPopup = WA.ui.openPopup("rsPopup", "Viens nous suivre sur les réseaux sociaux !", [{
             label: "Linkedin",
             className: "primary",
-            callback: () => WA.openTab('https://www.linkedin.com/company/neosoft_'),
+            callback: (popup) => {
+                WA.openTab('https://www.linkedin.com/company/neosoft_'),
                 // Close the popup when the "Close" button is pressed.
-                currentPopup.close(),
+                popup.close();
+            }    
         },
         {
             label: 'Twitter',
             className: 'primary',
-            callback: () => WA.openTab('https://twitter.com/workadventure_'),
-                currentPopup.close(),
+            callback: (popup) => {
+                WA.openTab('https://twitter.com/workadventure_'),
+                popup.close();
+            }
         }]);
 
     })
