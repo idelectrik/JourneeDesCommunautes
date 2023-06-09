@@ -5,7 +5,6 @@ import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 console.log('Script started successfully');
 
 let currentPopup: any = undefined;
-let currentZone: string;
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
@@ -69,52 +68,25 @@ WA.onInit().then(() => {
     WA.room.area.onLeave('indice9').subscribe(closePopup)
 
 
+    WA.room.area.onEnter('needHelp').subscribe(() => {
+        currentPopup = WA.ui.openPopup("Help", "C'est l'indice 9", [{
+            label: "Close",
+            className: "primary",
+            callback: () => WA.openTab('https://play.staging.workadventu.re/@/tcm/workadventure/wa-village'),
+                // Close the popup when the "Close" button is pressed.
+                // popup.close();
+        }]);
+
+    })
+
+    WA.room.area.onLeave('needHelp').subscribe(closePopup)
+
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');
     }).catch(e => console.error(e));
 
 }).catch(e => console.error(e));
-
-const config = [
-    {
-        zone: 'needHelp',
-        message: 'Do you need some guidance? We are happy to help you out.',
-        cta: [
-            {
-                label: 'Meet us',
-                className: 'primary',
-                callback: () => WA.openTab('https://play.staging.workadventu.re/@/tcm/workadventure/wa-village'),
-            }
-        ]
-    },
-    {
-        zone: 'followUs',
-        message: 'Hey! Have you already started following us?',
-        cta: [
-            {
-                label: 'LinkedIn',
-                className: 'primary',
-                callback: () => WA.openTab('https://www.linkedin.com/company/workadventu-re'),
-            },
-            {
-                label: 'Twitter',
-                className: 'primary',
-                callback: () => WA.openTab('https://twitter.com/workadventure_'),
-            }
-        ]
-    },
-]
-WA.onEnterZone('needHelp', () => {
-    currentZone = 'needHelp'
-    openPopup(currentZone, currentZone + 'Popup')
-});
-WA.onEnterZone('followUs', () => {
-    currentZone = 'followUs'
-    openPopup(currentZone, currentZone + 'Popup')
-});
-WA.onLeaveZone('needHelp', closePopup);
-WA.onLeaveZone('followUs', closePopup);
 
 
 function openPopup(zoneName: string, popupName: string) {
