@@ -82,7 +82,7 @@ WA.onInit().then(() => {
             label: 'Twitter',
             className: 'primary',
             callback: (popup) => {
-                WA.openTab('https://twitter.com/workadventure_'),
+                WA.openTab('https://twitter.com/neosoft_'),
                 popup.close();
             }
         }]);
