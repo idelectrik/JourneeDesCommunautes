@@ -14,7 +14,7 @@ WA.onInit().then(() => {
     WA.room.area.onEnter('indice1').subscribe(() => {
         // const today = new Date();
         // const time = today.getHours() + ":" + today.getMinutes();
-        currentPopup = WA.ui.openPopup("indice1Popup", "C'est l'indice 1", []);
+        currentPopup = WA.ui.openPopup("indice1Popup", "Je suis le Practice leader de la Practice DEVOPS, la lettre que tu recherches est la première de mon prénom !", []);
     })
 
     WA.room.area.onLeave('indice1').subscribe(closePopup)
